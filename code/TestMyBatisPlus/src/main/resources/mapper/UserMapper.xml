@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.codechenxi.mybatisx.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.codechenxi.mybatisx.entity.User">
+            <id property="uid" column="uid" />
+            <result property="username" column="username" />
+            <result property="age" column="age" />
+            <result property="email" column="email" />
+            <result property="isDeleted" column="is_deleted" />
+            <result property="sex" column="sex" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        uid,username,age,email,is_deleted,sex
+    </sql>
+    <select id="selectAge" resultMap="BaseResultMap">
+        select age
+        from t_user
+    </select>
+</mapper>

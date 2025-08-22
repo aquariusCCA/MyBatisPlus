@@ -2164,7 +2164,6 @@ mybatis-plus:
 > 记得将 uid 设为自增
 
 ```mysql
-USE mybatis_plus;
 INSERT INTO t_user (uid, name, age, email) VALUES
 (1, 'Jone', 18, 'test1@baomidou.com'),
 (2, 'Jack', 20, 'test2@baomidou.com'),
